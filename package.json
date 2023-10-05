@@ -1,0 +1,48 @@
+{
+  "name": "samsung-settings",
+  "version": "1.0.0",
+  "description": "Settings application for other OneUI-Project applications, build in Electron.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build:windows": "electron-builder"
+  },
+  "build": {
+    "appId": "Samsung Settings",
+    "asar": true,
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerIcon": "favicon.ico",
+      "uninstallerIcon": "favicon.ico",
+      "uninstallDisplayName": "Uninstall Samsung Settings",
+      "license": "LICENSE",
+      "allowToChangeInstallationDirectory": false
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/project-oneui/Samsung-Settings.git"
+  },
+  "keywords": [
+    "samsung",
+    "oneui",
+    "samsung-settings"
+  ],
+  "author": "Vaneeyo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/project-oneui/Samsung-Settings/issues"
+  },
+  "homepage": "https://github.com/project-oneui/Samsung-Settings#readme",
+  "devDependencies": {
+    "electron": "^26.2.4",
+    "electron-builder": "^24.6.4",
+    "electron-reloader": "^1.2.3"
+  }
+}

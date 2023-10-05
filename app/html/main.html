@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/components/toggle.css">
+    <link rel="stylesheet" href="../css/components/bubble.css">
+    <link rel="stylesheet" href="../css/components/input-text.css">
+    <link rel="stylesheet" href="../css/components/button.css">
+    <link rel="stylesheet" href="../css/components/key-bubble.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/main.js"></script>
+</head>
+
+<body>
+    <div id="info-modal">
+        <img class="back" src="../res/ic_oui_back.svg" onclick="openModal()">
+        <h2>Samsung Settings</h1>
+            <span>Version</span>
+            <span></span>
+    </div>
+
+    <div id="backdrop"></div>
+
+    <img src="../res/ic_oui_info_outline.svg" id="info" onclick="openModal()">
+    <navbar>
+        <header>
+            <h1>Settings</h1>
+        </header>
+
+        <bubble-nav onclick="openSubMenu('samsung-widgets', event)">
+            <img src="../res/icons/samsung-widgets.ico" class="bubble-icon">
+            <bubble-text>
+                <span>Samsung Widgets</span>
+                <bubble-settings>
+                    <span>Music</span>
+                    <point></point>
+                    <span>Battery</span>
+                    <point></point>
+                    <span>Weather</span>
+                </bubble-settings>
+            </bubble-text>
+        </bubble-nav>
+
+        <!-- <bubble-nav onclick="openSubMenu('samsung-finder')">
+            <img src="../res/icons/samsung-finder.ico" class="bubble-icon">
+            <bubble-text>
+                <span>Samsung Finder</span>
+                <bubble-settings>
+                    <span>Autostart</span>
+                    <point></point>
+                    <span>Shortcut</span>
+                </bubble-settings>
+            </bubble-text>
+        </bubble-nav> -->
+    </navbar>
+
+    <subMenu>
+    </subMenu>
+</body>
+
+</html>

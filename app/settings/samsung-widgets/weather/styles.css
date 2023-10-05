@@ -1,0 +1,16 @@
+#search {
+    width: 100%;
+}
+
+#container-autocomplete {
+    display: flex;
+    width: 100%;
+    background-color: var(--separator-horizontal);
+    height: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+}

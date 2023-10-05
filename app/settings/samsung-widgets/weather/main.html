@@ -1,0 +1,27 @@
+<bubble-titlebar>
+    <img class="back-menu" src="../res/ic_oui_back.svg"
+        onclick="openSubMenu('samsung-widgets'); deleteScript('samsung-widgets\\weather'); deleteScript('samsung-widgets')">
+    <strong>Weather</strong>
+</bubble-titlebar>
+
+<bubble>
+    <container class="bubble-info">
+        <span>Get Location with IP Address</span>
+        <label class="oui-label oui-container-toggle" for="ip-checkbox">
+            <seperatorvertical></seperatorvertical>
+            <input id="ip-checkbox" type="checkbox" class="toggle">
+            <span class="toggle-slider"></span>
+        </label>
+    </container>
+
+    <seperatorhorizontal></seperatorhorizontal>
+
+    <container class="bubble-content">
+        <input type="text" class="search" placeholder="Search" id="search">
+        <container id="container-autocomplete">
+            <strong id="autocomplete-name">Something went</strong>
+            <span id="autocomplete-country">wrong</span>
+        </container>
+    </container>
+
+</bubble>

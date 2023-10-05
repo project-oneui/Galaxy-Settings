@@ -1,0 +1,57 @@
+name: Windows-Build
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: |
+          npm install
+          echo "✔ Dependencies Installed!"
+
+      - name: Set Package Version
+        id: set_version
+        run: |
+          echo "::set-output name=PACKAGE_VERSION::$(echo ${{ github.run_number }})"
+        shell: bash
+
+      - name: Update package.json with GitHub Run Number
+        run: |
+          node -e "const fs = require('fs'); const packageJson = JSON.parse(fs.readFileSync('package.json')); packageJson.version = '1.${{ github.run_number }}.0'; fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));"
+        shell: bash
+
+      - name: Build for Windows
+        run: |
+          npm run build:windows
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ./dist/*.exe
+          name: Samsung Settings v${{ github.run_number }}
+          tag_name: v${{ github.run_number }}
+          body: |
+            > [!NOTE] 
+            > This release was auto-generated
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

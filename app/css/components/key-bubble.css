@@ -1,0 +1,5 @@
+key-bubble {
+    background-color: var(--separator-horizontal);
+    padding: 6px 6px 6px 6px;
+    border-radius: 5px;
+}
