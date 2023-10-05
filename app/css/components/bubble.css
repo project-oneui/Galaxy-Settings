@@ -88,7 +88,7 @@ bubble {
     gap: 10px;
 }
 
-.settings {
+.settings, .qrcode {
     cursor: pointer;
 }
 
@@ -110,4 +110,9 @@ bubble-titlebar {
     align-items: center;
     flex-direction: row;
     gap: 10px;
+}
+
+.qrcode-image {
+    width: 250px;
+    border-radius: 10px;
 }
