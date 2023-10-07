@@ -1,0 +1,42 @@
+.color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#container-colors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#teal {
+    background-color: rgb(34, 190, 179);
+}
+
+#blue {
+    background-color: rgb(123, 175, 232);
+}
+
+#pink {
+    background-color: rgb(202, 150, 235);
+}
+
+#purple {
+    background-color: rgb(235, 139, 200);
+}
+
+#beige {
+    background-color: rgb(238, 218, 193);
+}
+
+#black {
+    background-color: rgb(8, 8, 8);
+}
+
+.color:hover {
+    filter: opacity(0.8);
+}
