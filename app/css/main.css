@@ -98,3 +98,17 @@ point {
     background-color: var(--secondary);
     border-radius: 50%;
 }
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--separator-vertical);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-darker);
+    border-radius: 4px;
+    border: 0px solid #ffffff;
+}

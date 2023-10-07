@@ -16,6 +16,7 @@ setTimeout(() => {
         { name: 'flightWidget', element: document.getElementById('flight-checkbox') },
         { name: 'calendarWidget', element: document.getElementById('calendar-checkbox') },
         { name: 'notesWidget', element: document.getElementById('notes-checkbox') },
+        { name: 'clockWidget', element: document.getElementById('clock-checkbox') },
     ];
 
     checkboxes.forEach((checkbox) => {

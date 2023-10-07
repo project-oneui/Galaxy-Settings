@@ -15,8 +15,6 @@ const createWindow = () => {
     })
 
     mainWindow.loadFile('app/html/main.html')
-
-    mainWindow.webContents.openDevTools()
 }
 
 app.whenReady().then(() => {
