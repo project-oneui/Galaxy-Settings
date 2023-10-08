@@ -21,8 +21,12 @@
     background-color: rgb(123, 175, 232);
 }
 
+#green {
+    background-color: rgb(206, 208, 171);
+}
+
 #pink {
-    background-color: rgb(202, 150, 235);
+    background-color: rgb(202, 150, 235)
 }
 
 #purple {
@@ -35,6 +39,10 @@
 
 #black {
     background-color: rgb(8, 8, 8);
+}
+
+#white {
+    background-color: white;
 }
 
 .color:hover {

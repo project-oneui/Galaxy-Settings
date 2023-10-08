@@ -70,6 +70,7 @@ function openModal() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('version').innerHTML = `Version ${packageJson.version}`
     openSubMenu('samsung-widgets')
     const backdrop = document.getElementById('backdrop');
     const infoModal = document.getElementById('info-modal');
