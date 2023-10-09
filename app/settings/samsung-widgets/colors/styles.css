@@ -45,6 +45,10 @@
     background-color: white;
 }
 
+#red {
+    background-color: rgb(240, 122, 140);
+}
+
 .color:hover {
     filter: opacity(0.8);
 }
