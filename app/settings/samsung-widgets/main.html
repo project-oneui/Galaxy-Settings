@@ -23,7 +23,6 @@
             <div class="bubble-right">
                 <img class="preview-button" onclick="togglePreview('music-container')"
                     src=".././res/ic_oui_keyboard_arrow_down.svg"></img>
-
             </div>
         </container>
 
@@ -105,10 +104,17 @@
             <img class="image-preview" src=".././res/previews/weather/weather_preview.png">
             <preview-info>
                 <span class="info">Weather</span>
-                <label class="oui-label oui-container-toggle" for="weather-checkbox">
-                    <input id="weather-checkbox" type="checkbox" class="toggle">
-                    <span class="toggle-slider"></span>
-                </label>
+
+                <preview-right>
+                    <img class="settings" src=".././res/ic_oui_settings_outline.svg"
+                        onclick="openSubMenu('samsung-widgets/weather')">
+
+                    <label class="oui-label oui-container-toggle" for="weather-checkbox">
+                        <input id="weather-checkbox" type="checkbox" class="toggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </preview-right>
+
             </preview-info>
         </bubble-preview>
 
@@ -124,10 +130,6 @@
             </div>
 
             <div class="bubble-right">
-                <!-- <label class="oui-label oui-container-toggle" for="wallet-checkbox">
-                                        <input id="clock-checkbox" type="checkbox" class="toggle">
-                                        <span class="toggle-slider"></span>
-                </label> -->
                 <img class="preview-button" onclick="togglePreview('news-container')"
                     src=".././res/ic_oui_keyboard_arrow_down.svg"></img>
 
@@ -171,10 +173,17 @@
             <img src=".././res/previews/wallet/flight_preview.png">
             <preview-info>
                 <span class="info">Flight</span>
-                <label class="oui-label oui-container-toggle" for="flight-checkbox">
-                    <input id="flight-checkbox" type="checkbox" class="toggle">
-                    <span class="toggle-slider"></span>
-                </label>
+
+                <preview-right>
+                    <img class="settings" src=".././res/ic_oui_settings_outline.svg"
+                        onclick="openSubMenu('samsung-widgets/flight')">
+
+                    <label class="oui-label oui-container-toggle" for="flight-checkbox">
+                        <input id="flight-checkbox" type="checkbox" class="toggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </preview-right>
+
             </preview-info>
 
         </bubble-preview>

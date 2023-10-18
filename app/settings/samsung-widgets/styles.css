@@ -23,7 +23,7 @@ bubble-preview {
     justify-content: center;
     align-items: center;
     transition: all .2s ease-in-out;
-    background-color: var(--secondary);
+    background-color: var(--secondary-darker);
     box-sizing: border-box;
     padding: 20px 20px 20px 20px;
     border-radius: 33px;
@@ -42,4 +42,9 @@ preview-info {
     gap: 5px;
     width: 390px;
     justify-content: space-between;
+}
+
+preview-right {
+    display: flex;
+    gap: 5px;
 }
