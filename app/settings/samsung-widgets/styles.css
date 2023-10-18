@@ -1,0 +1,45 @@
+.hidden {
+    display: none;
+}
+
+.bubble-info {
+    transition: all 0.4s ease-in-out;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.preview-button {
+    cursor: pointer;
+}
+
+.bubble-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+bubble-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;
+    background-color: var(--secondary);
+    box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+    border-radius: 33px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bubble-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+preview-info {
+    display: flex;
+    gap: 5px;
+    width: 390px;
+    justify-content: space-between;
+}

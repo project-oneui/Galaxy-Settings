@@ -35,3 +35,38 @@ setTimeout(() => {
 
     setInterval(setCheckBoxes, 500)
 }, 200);
+
+function togglePreview(containerId) {
+    var container = document.getElementById(containerId);
+    var hiddenPreview = container.querySelector('.hidden-preview');
+    container.style.height = '24px';
+
+    // Toggle the visibility of hidden-preview
+    if (hiddenPreview.classList.contains('hidden')) {
+        hiddenPreview.classList.remove('hidden');
+    } else {
+        hiddenPreview.classList.add('hidden');
+    }
+
+    if (hiddenPreview.classList.contains('hidden')) {
+        container.style.height = '48px';
+    } else {
+        container.style.height = hiddenPreview.offsetHeight + 40 + "px";
+    }
+
+    setTimeout(() => {
+        // Adjust the container height based on hidden-preview visibility
+
+        if (hiddenPreview.classList.contains('hidden')) {
+            hiddenPreview.style.opacity = "0";
+        } else {
+            hiddenPreview.style.opacity = "1";
+        }
+    }, 300);
+
+
+
+
+
+
+}

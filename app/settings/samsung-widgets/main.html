@@ -1,157 +1,287 @@
 <bubble>
     <container class="bubble-info">
+        <container class="bubble-top">
+            <span>Colors</span>
 
-        <span>Colors</span>
+            <div class="bubble-right">
+                <img class="settings" src=".././res/ic_oui_settings_outline.svg"
+                    onclick="openSubMenu('samsung-widgets/colors')">
+            </div>
+        </container>
 
-        <div class="bubble-right">
-            <img class="settings" src=".././res/ic_oui_settings_outline.svg"
-                onclick="openSubMenu('samsung-widgets/colors')">
-        </div>
     </container>
 </bubble>
 
 <bubble>
-    <container class="bubble-info">
+    <container class="bubble-info" id="music-container">
+        <container class="bubble-top">
+            <div class="bubble-left">
+                <img src="../res/icons/widgets/music.png" class="bubble-icon">
+                <span>Samsung Music</span>
+            </div>
 
-        <span>Music Widget</span>
+            <div class="bubble-right">
+                <img class="preview-button" onclick="togglePreview('music-container')"
+                    src=".././res/ic_oui_keyboard_arrow_down.svg"></img>
 
-        <div class="bubble-right">
-            <label class="oui-label oui-container-toggle" for="music-checkbox">
-                <input id="music-checkbox" type="checkbox" class="toggle">
-                <span class="toggle-slider"></span>
-            </label>
-        </div>
-    </container>
+            </div>
+        </container>
 
-    <seperatorhorizontal></seperatorhorizontal>
 
-    <container class="bubble-info">
 
-        <span>Battery Widget</span>
-
-        <div class="bubble-right">
-            <img class="qrcode" src=".././res/ic_oui_qr_code.svg"
-                onclick="openSubMenu('samsung-widgets/battery/qrcode')">
-
-            <seperatorvertical></seperatorvertical>
-
-            <label class="oui-label oui-container-toggle" for="battery-checkbox">
-                <input id="battery-checkbox" type="checkbox" class="toggle">
-                <span class="toggle-slider"></span>
-            </label>
-        </div>
-    </container>
-
-    <seperatorhorizontal></seperatorhorizontal>
-
-    <container class="bubble-info">
-
-        <span>Device Care Widget</span>
-
-        <div class="bubble-right">
-            <label class="oui-label oui-container-toggle" for="deviceCare-checkbox">
-                <input id="deviceCare-checkbox" type="checkbox" class="toggle">
-                <span class="toggle-slider"></span>
-            </label>
-        </div>
-    </container>
-
-    <seperatorhorizontal></seperatorhorizontal>
-
-    <container class="bubble-info">
-
-        <span>Weather Widget</span>
-
-        <div class="bubble-right">
-            <img class="settings" src=".././res/ic_oui_settings_outline.svg"
-                onclick="openSubMenu('samsung-widgets/weather')">
-
-            <seperatorvertical></seperatorvertical>
-
-            <label class="oui-label oui-container-toggle" for="weather-checkbox">
-                <input id="weather-checkbox" type="checkbox" class="toggle">
-                <span class="toggle-slider"></span>
-            </label>
-        </div>
-    </container>
-
-    <seperatorhorizontal></seperatorhorizontal>
-
-    <container class="bubble-info">
-
-        <span>News Widget</span>
-
-        <div class="bubble-right">
-            <label class="oui-label oui-container-toggle" for="news-checkbox">
-                <input id="news-checkbox" type="checkbox" class="toggle">
-                <span class="toggle-slider"></span>
-            </label>
-        </div>
-    </container>
-
-    <seperatorhorizontal></seperatorhorizontal>
-
-    <container class="bubble-info">
-
-        <span>Flight Widget</span>
-
-        <div class="bubble-right">
-            <img class="settings" src=".././res/ic_oui_settings_outline.svg"
-                onclick="openSubMenu('samsung-widgets/flight')">
-
-            <seperatorvertical></seperatorvertical>
-
-            <label class="oui-label oui-container-toggle" for="flight-checkbox">
-                <input id="flight-checkbox" type="checkbox" class="toggle">
-                <span class="toggle-slider"></span>
-            </label>
-        </div>
-
+        <bubble-preview class="hidden-preview hidden">
+            <img class="image-preview" src=".././res/previews/music/music_preview.png">
+            <preview-info>
+                <span class="info">Music</span>
+                <label class="oui-label oui-container-toggle" for="music-checkbox">
+                    <input id="music-checkbox" type="checkbox" class="toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </preview-info>
+        </bubble-preview>
 
     </container>
 
     <seperatorhorizontal></seperatorhorizontal>
 
-    <container class="bubble-info">
+    <container class="bubble-info" id="deviceCare-container">
+        <container class="bubble-top">
+            <div class="bubble-left">
+                <img src="../res/icons/widgets/deviceCare.png" class="bubble-icon">
+                <span>Device Care</span>
+            </div>
 
-        <span>Calendar Widget</span>
+            <div class="bubble-right">
+                <img class="preview-button" onclick="togglePreview('deviceCare-container')"
+                    src=".././res/ic_oui_keyboard_arrow_down.svg"></img>
 
-        <div class="bubble-right">
-            <label class="oui-label oui-container-toggle" for="calendar-checkbox">
-                <input id="calendar-checkbox" type="checkbox" class="toggle">
-                <span class="toggle-slider"></span>
-            </label>
-        </div>
+            </div>
+        </container>
+
+
+
+        <bubble-preview class="hidden-preview hidden">
+            <img class="image-preview" src=".././res/previews/deviceCare/battery_preview.png">
+
+            <preview-info>
+                <span class="info">Battery</span>
+                <label class="oui-label oui-container-toggle" for="battery-checkbox">
+                    <input id="battery-checkbox" type="checkbox" class="toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </preview-info>
+
+            <img class="image-preview" src=".././res/previews/deviceCare/storage_preview.png">
+            <preview-info>
+                <span class="info">Storage</span>
+                <label class="oui-label oui-container-toggle" for="deviceCare-checkbox">
+                    <input id="deviceCare-checkbox" type="checkbox" class="toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </preview-info>
+        </bubble-preview>
+
     </container>
 
     <seperatorhorizontal></seperatorhorizontal>
 
-    <container class="bubble-info">
+    <container class="bubble-info" id="weather-container">
+        <container class="bubble-top">
+            <div class="bubble-left">
+                <img src="../res/icons/widgets/weather.png" class="bubble-icon">
+                <span>Weather</span>
+            </div>
 
-        <span>Notes Widget</span>
+            <div class="bubble-right">
+                <img class="preview-button" onclick="togglePreview('weather-container')"
+                    src=".././res/ic_oui_keyboard_arrow_down.svg"></img>
 
-        <div class="bubble-right">
-            <label class="oui-label oui-container-toggle" for="notes-checkbox">
-                <input id="notes-checkbox" type="checkbox" class="toggle">
-                <span class="toggle-slider"></span>
-            </label>
-        </div>
+            </div>
+        </container>
+
+
+
+        <bubble-preview class="hidden-preview hidden">
+            <img class="image-preview" src=".././res/previews/weather/weather_preview.png">
+            <preview-info>
+                <span class="info">Weather</span>
+                <label class="oui-label oui-container-toggle" for="weather-checkbox">
+                    <input id="weather-checkbox" type="checkbox" class="toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </preview-info>
+        </bubble-preview>
+
     </container>
 
     <seperatorhorizontal></seperatorhorizontal>
 
-    <container class="bubble-info">
+    <container class="bubble-info" id="news-container">
+        <container class="bubble-top">
+            <div class="bubble-left">
+                <img src="../res/icons/widgets/news.png" class="bubble-icon">
+                <span>Samsung News</span>
+            </div>
 
-        <span>Clock Widget</span>
+            <div class="bubble-right">
+                <!-- <label class="oui-label oui-container-toggle" for="wallet-checkbox">
+                                        <input id="clock-checkbox" type="checkbox" class="toggle">
+                                        <span class="toggle-slider"></span>
+                </label> -->
+                <img class="preview-button" onclick="togglePreview('news-container')"
+                    src=".././res/ic_oui_keyboard_arrow_down.svg"></img>
 
-        <div class="bubble-right">
-            <label class="oui-label oui-container-toggle" for="clock-checkbox">
-                <input id="clock-checkbox" type="checkbox" class="toggle">
-                <span class="toggle-slider"></span>
-            </label>
-        </div>
+            </div>
+        </container>
+
+
+
+        <bubble-preview class="hidden-preview hidden">
+            <img src=".././res/previews/news/topStories_preview.png">
+            <preview-info>
+                <span class="info">Top Stories</span>
+                <label class="oui-label oui-container-toggle" for="news-checkbox">
+                    <input id="news-checkbox" type="checkbox" class="toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </preview-info>
+        </bubble-preview>
+
     </container>
 
+    <seperatorhorizontal></seperatorhorizontal>
+
+    <container class="bubble-info" id="wallet-container">
+        <container class="bubble-top">
+            <div class="bubble-left">
+                <img src="../res/icons/widgets/wallet.png" class="bubble-icon">
+                <span>Samsung Wallet</span>
+            </div>
+
+            <div class="bubble-right">
+                <img class="preview-button" onclick="togglePreview('wallet-container')"
+                    src=".././res/ic_oui_keyboard_arrow_down.svg"></img>
+
+            </div>
+        </container>
+
+
+
+        <bubble-preview class="hidden-preview hidden">
+            <img src=".././res/previews/wallet/flight_preview.png">
+            <preview-info>
+                <span class="info">Flight</span>
+                <label class="oui-label oui-container-toggle" for="flight-checkbox">
+                    <input id="flight-checkbox" type="checkbox" class="toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </preview-info>
+
+        </bubble-preview>
+
+    </container>
+
+    <seperatorhorizontal></seperatorhorizontal>
+
+    <container class="bubble-info" id="calendar-container">
+        <container class="bubble-top">
+            <div class="bubble-left">
+                <img src="../res/icons/widgets/calendar.png" class="bubble-icon">
+                <span>Calendar</span>
+            </div>
+
+            <div class="bubble-right">
+                <img class="preview-button" onclick="togglePreview('calendar-container')"
+                    src=".././res/ic_oui_keyboard_arrow_down.svg"></img>
+
+            </div>
+        </container>
+
+
+
+        <bubble-preview class="hidden-preview hidden">
+            <img class="image-preview" src=".././res/previews/calendar/calendar_preview.png">
+            <preview-info>
+                <span class="info">Calendar</span>
+                <label class="oui-label oui-container-toggle" for="calendar-checkbox">
+                    <input id="calendar-checkbox" type="checkbox" class="toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </preview-info>
+        </bubble-preview>
+
+    </container>
+
+    <seperatorhorizontal></seperatorhorizontal>
+
+    <container class="bubble-info" id="notes-container">
+        <container class="bubble-top">
+            <div class="bubble-left">
+                <img src="../res/icons/widgets/notes.png" class="bubble-icon">
+                <span>Samsung Notes</span>
+            </div>
+
+            <div class="bubble-right">
+                <!-- <label class="oui-label oui-container-toggle" for="notes-checkbox">
+                            <input id="clock-checkbox" type="checkbox" class="toggle">
+                            <span class="toggle-slider"></span>
+                        </label> -->
+                <img class="preview-button" onclick="togglePreview('notes-container')"
+                    src=".././res/ic_oui_keyboard_arrow_down.svg"></img>
+
+            </div>
+        </container>
+
+
+
+        <bubble-preview class="hidden-preview hidden">
+            <img class="image-preview" src=".././res/previews/notes/quickNotes_preview.png">
+            <preview-info>
+                <span class="info">Quick Notes</span>
+                <label class="oui-label oui-container-toggle" for="notes-checkbox">
+                    <input id="notes-checkbox" type="checkbox" class="toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </preview-info>
+        </bubble-preview>
+
+    </container>
+
+    <seperatorhorizontal></seperatorhorizontal>
+
+    <container class="bubble-info" id="clock-container">
+        <container class="bubble-top">
+            <div class="bubble-left">
+                <img src="../res/icons/widgets/clock.png" class="bubble-icon">
+                <span>Clock</span>
+            </div>
+
+            <div class="bubble-right">
+                <!-- <label class="oui-label oui-container-toggle" for="clock-checkbox">
+                        <input id="clock-checkbox" type="checkbox" class="toggle">
+                        <span class="toggle-slider"></span>
+                    </label> -->
+                <img class="preview-button" onclick="togglePreview('clock-container')"
+                    src=".././res/ic_oui_keyboard_arrow_down.svg"></img>
+
+            </div>
+        </container>
+
+
+
+        <bubble-preview class="hidden-preview hidden">
+            <img class="image-preview" src=".././res/previews/clock/clock_preview.png">
+            <preview-info>
+                <span class="info">Digital Clock</span>
+                <label class="oui-label oui-container-toggle" for="clock-checkbox">
+                    <input id="clock-checkbox" type="checkbox" class="toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </preview-info>
+        </bubble-preview>
+
+    </container>
+    <br>
 </bubble>
 
 <br>

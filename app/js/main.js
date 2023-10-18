@@ -55,11 +55,13 @@ function openModal() {
     const backdrop = document.getElementById('backdrop');
     const infoModal = document.getElementById('info-modal');
     if (infoModal.style.opacity == "0" && backdrop.style.opacity == "0") {
+        disableScrolling()
         infoModal.style.opacity = "1";
         backdrop.style.opacity = "1";
         backdrop.style.zIndex = "4";
         infoModal.style.zIndex = "5";
     } else {
+        enableScrolling()
         infoModal.style.opacity = "0";
         backdrop.style.opacity = "0";
         setTimeout(() => {
@@ -81,4 +83,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+function disableScrolling() {
+    window.scrollTo(0,0)
+    var x = window.scrollX;
+    var y = window.scrollY;
+    window.onscroll = function () { window.scrollTo(x, y); };
+}
 
+function enableScrolling() {
+    window.onscroll = function () { };
+}
