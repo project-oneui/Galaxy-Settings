@@ -12,11 +12,11 @@ setTimeout(() => {
         { name: 'batteryWidget', element: document.getElementById('battery-checkbox') },
         { name: 'deviceCareWidget', element: document.getElementById('deviceCare-checkbox') },
         { name: 'weatherWidget', element: document.getElementById('weather-checkbox') },
-        { name: 'newsWidget', element: document.getElementById('news-checkbox') },
+        { name: 'topStoriesWidget', element: document.getElementById('topStories-checkbox') },
         { name: 'flightWidget', element: document.getElementById('flight-checkbox') },
         { name: 'calendarWidget', element: document.getElementById('calendar-checkbox') },
-        { name: 'notesWidget', element: document.getElementById('notes-checkbox') },
-        { name: 'clockWidget', element: document.getElementById('clock-checkbox') },
+        { name: 'quickNotesWidget', element: document.getElementById('quickNotes-checkbox') },
+        { name: 'digitalClockWidget', element: document.getElementById('digitalClock-checkbox') },
     ];
 
     checkboxes.forEach((checkbox) => {
