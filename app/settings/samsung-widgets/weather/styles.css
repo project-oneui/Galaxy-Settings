@@ -14,3 +14,7 @@
     padding: 10px 10px 10px 10px;
     box-sizing: border-box;
 }
+
+.bubble-info {
+    flex-direction: row;
+}
