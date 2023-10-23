@@ -298,6 +298,38 @@
         </bubble-preview>
 
     </container>
+
+    <seperatorhorizontal></seperatorhorizontal>
+
+    <container class="bubble-info" id="videoPlayer-container">
+        <container class="bubble-top">
+            <div class="bubble-left">
+                <img src="../res/icons/widgets/videoPlayer.png" class="bubble-icon">
+                <span>Video Player</span>
+            </div>
+
+            <div class="bubble-right">
+                <img class="preview-button" onclick="togglePreview('videoPlayer-container')"
+                    src=".././res/ic_oui_keyboard_arrow_down.svg"></img>
+
+            </div>
+        </container>
+
+
+
+        <bubble-preview class="hidden-preview hidden">
+            <img class="image-preview" src=".././res/previews/videoPlayer/upcomingMovies_preview.png">
+            <preview-info>
+                <span class="info">Upcoming Movies</span>
+                <label class="oui-label oui-container-toggle" for="upcomingMovies-checkbox">
+                    <input id="upcomingMovies-checkbox" type="checkbox" class="toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </preview-info>
+        </bubble-preview>
+
+    </container>
+
     <br>
 </bubble>
 

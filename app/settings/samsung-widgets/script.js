@@ -18,6 +18,7 @@ setTimeout(() => {
         { name: 'quickNotesWidget', element: document.getElementById('quickNotes-checkbox') },
         { name: 'digitalClockWidget', element: document.getElementById('digitalClock-checkbox') },
         { name: 'forecastWidget', element: document.getElementById('forecast-checkbox') },
+        { name: 'upcomingMoviesWidget', element: document.getElementById('upcomingMovies-checkbox') },
     ];
 
     checkboxes.forEach((checkbox) => {
@@ -64,10 +65,5 @@ function togglePreview(containerId) {
             hiddenPreview.style.opacity = "1";
         }
     }, 300);
-
-
-
-
-
 
 }
