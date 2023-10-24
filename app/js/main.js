@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path');
 const os = require('os');
 
-const folderPath = path.join(os.homedir(), 'AppData', 'Local', 'Samsung-Widgets');
+const folderPath = path.join(os.homedir(), 'AppData', 'Local', 'Galaxy-Widgets');
 
 var packageJson = require('../../package.json');
 
@@ -73,7 +73,7 @@ function openModal() {
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('version').innerHTML = `Version ${packageJson.version}`
-    openSubMenu('samsung-widgets')
+    openSubMenu('Galaxy-widgets')
     const backdrop = document.getElementById('backdrop');
     const infoModal = document.getElementById('info-modal');
 

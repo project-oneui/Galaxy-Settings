@@ -5,7 +5,7 @@ const createWindow = () => {
         width: 900,
         height: 600,
         icon: __dirname + "/favicon.ico",
-        title: "Samsung Settings",
+        title: "Galaxy Settings",
         resizable: false,
         autoHideMenuBar: true,
         webPreferences: {

@@ -1,7 +1,7 @@
-# Samsung Settings
+# Galaxy Settings
 Settings application for other OneUI-Project applications, build in Electron.
 
 # Checklist
-- [ ] Samsung Finder Support
+- [ ] Galaxy Finder Support
 
-# This is not an official Samsung app!
+# This is not an official Galaxy app!

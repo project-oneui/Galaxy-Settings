@@ -1,8 +1,8 @@
 {
-  "name": "samsung-settings",
+  "name": "galaxy-settings",
   "version": "1.0.0",
   "description": "Settings application for other OneUI-Project applications, build in Electron.",
-  "productName": "Samsung Settings",
+  "productName": "Galaxy Settings",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
     "build:windows": "electron-builder"
   },
   "build": {
-    "appId": "Samsung Settings",
+    "appId": "Galaxy Settings",
     "asar": true,
     "win": {
       "target": [
@@ -21,26 +21,26 @@
       "oneClick": true,
       "installerIcon": "favicon.ico",
       "uninstallerIcon": "favicon.ico",
-      "uninstallDisplayName": "Uninstall Samsung Settings",
+      "uninstallDisplayName": "Uninstall Galaxy Settings",
       "license": "LICENSE",
       "allowToChangeInstallationDirectory": false
     }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/project-oneui/Samsung-Settings.git"
+    "url": "git+https://github.com/project-oneui/Galaxy-Settings.git"
   },
   "keywords": [
-    "samsung",
+    "Galaxy",
     "oneui",
-    "samsung-settings"
+    "Galaxy-settings"
   ],
   "author": "Vaneeyo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/project-oneui/Samsung-Settings/issues"
+    "url": "https://github.com/project-oneui/Galaxy-Settings/issues"
   },
-  "homepage": "https://github.com/project-oneui/Samsung-Settings#readme",
+  "homepage": "https://github.com/project-oneui/Galaxy-Settings#readme",
   "devDependencies": {
     "electron": "^26.2.4",
     "electron-builder": "^24.6.4",
