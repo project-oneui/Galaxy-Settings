@@ -19,6 +19,7 @@ setTimeout(() => {
         { name: 'digitalClockWidget', element: document.getElementById('digitalClock-checkbox') },
         { name: 'forecastWidget', element: document.getElementById('forecast-checkbox') },
         { name: 'upcomingMoviesWidget', element: document.getElementById('upcomingMovies-checkbox') },
+        { name: 'hoursForecastWidget', element: document.getElementById('hoursForecast-checkbox') },
     ];
 
     checkboxes.forEach((checkbox) => {
