@@ -10,6 +10,7 @@
 
 .preview-button {
     cursor: pointer;
+    transition: opacity .15s ease-in-out;
 }
 
 .bubble-top {
@@ -46,5 +47,7 @@ preview-info {
 
 preview-right {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 5px;
 }

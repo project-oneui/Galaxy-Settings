@@ -2,7 +2,7 @@
 .oui-container-toggle {
     position: relative;
     display: flex;
-    align-items: center;
+    align-content: center;
 }
 
 .toggle {
@@ -14,37 +14,43 @@
 
 .toggle-slider {
     position: relative;
-    display: block;
-    width: 39px;
-    height: 20px;
-    border-radius: 10px;
+    display: flex;
+    width: 32px;
+    height: 18px;
+    border-radius: 10.25px;
     background-color: #646368;
     cursor: pointer;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .toggle-slider:after {
     position: absolute;
     content: "";
-    height: 18px;
-    width: 18px;
+    height: 12px;
+    width: 12px;
+    border: 1px solid #fcfcff;
     border-radius: 50%;
-    border: 1px solid #646368;
-    background-color: var(--text);
-    transition: .2s;
+    background-color: #fcfcff;
+    transition: .2s all ease-in-out;
+    box-sizing: border-box;
 }
 
-input:checked+.toggle-slider {
+input:checked + .toggle-slider {
+    padding-right: 2px;
     background-color: var(--accent);
-    border-color: var(--accent);
 }
 
-input:focus+.toggle-slider {
+input:not(:checked) +.toggle-slider {
+    padding-left: 2px;
+}
+
+input:focus + .toggle-slider {
     box-shadow: 0 0 1px var(--accent);
 }
 
-input:checked+.toggle-slider:after {
-    transform: translateX(20px);
-    border-color: var(--accent);
+input:checked + .toggle-slider:after {
+    transform: translateX(18px);
 }
 
 .oui-container-toggle:hover .toggle-slider:after {

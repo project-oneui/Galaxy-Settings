@@ -42,29 +42,34 @@ setTimeout(() => {
 function togglePreview(containerId) {
     var container = document.getElementById(containerId);
     var hiddenPreview = container.querySelector('.hidden-preview');
+    var previewButton = container.querySelector('.preview-button')
     container.style.height = '24px';
+    let classList = hiddenPreview.classList
 
-    // Toggle the visibility of hidden-preview
-    if (hiddenPreview.classList.contains('hidden')) {
-        hiddenPreview.classList.remove('hidden');
-    } else {
-        hiddenPreview.classList.add('hidden');
+    function setPreviewButton() {
+        let imageSrc = classList.contains('hidden') ? ".././res/ic_oui_keyboard_arrow_up.svg" : ".././res/ic_oui_keyboard_arrow_down.svg"
+        previewButton.style.opacity = 0;
+        setTimeout(() => {
+            previewButton.src = imageSrc
+            previewButton.style.opacity = 1;
+        }, 150);
+        (classList.contains('hidden')) ? hiddenPreview.classList.remove('hidden') : hiddenPreview.classList.add('hidden');
     }
 
-    if (hiddenPreview.classList.contains('hidden')) {
-        container.style.height = '48px';
-    } else {
-        container.style.height = hiddenPreview.offsetHeight + 40 + "px";
+    setPreviewButton()
+
+    function expand() {
+        (classList.contains('hidden')) ? container.style.height = '48px' : container.style.height = hiddenPreview.offsetHeight + 40 + "px";
+
+        // timeout because of animation
+        setTimeout(() => {
+            // if hidden opacity = 0 else 1
+            let opacity = classList.contains('hidden') ? 0 : 1
+
+            hiddenPreview.style.opacity = opacity
+        }, 300);
     }
 
-    setTimeout(() => {
-        // Adjust the container height based on hidden-preview visibility
-
-        if (hiddenPreview.classList.contains('hidden')) {
-            hiddenPreview.style.opacity = "0";
-        } else {
-            hiddenPreview.style.opacity = "1";
-        }
-    }, 300);
+    expand()
 
 }
